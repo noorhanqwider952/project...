@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات عن ملعب الجولف</title>
+    <link rel="stylesheet" href="G:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\معلومات اضافية.css">
+</head>
+<body>
+    <div class="container">
+        <h1>معلومات عن ملعب الجولف</h1>
+
+        <!-- قسم المعلومات -->
+        <div class="info-section">
+            <h2>نبذة عن الملعب</h2>
+            <p>
+                ملعب الجولف الخاص بنا هو واحد من أجمل الملاعب في المنطقة، حيث يمتد على مساحة 100 هكتار ويضم 18 حفرة مصممة بأعلى المعايير العالمية. يتميز الملعب بإطلالات خلابة على الطبيعة والبحيرات الصناعية، مما يجعله وجهة مثالية لكل عشاق هذه الرياضة.
+            </p>
+            <button id="toggleDetails">عرض المزيد من التفاصيل</button>
+            <p id="extraDetails" class="hidden">
+                بالإضافة إلى ذلك، يوفر الملعب خدمات مميزة مثل دروس الجولف للمبتدئين، متاجر لبيع المعدات، ومطاعم فاخرة. كما أن الملعب مجهز بأحدث التقنيات لتحسين تجربة اللاعبين.
+            </p>
+        </div>
+
+        <!-- معرض الصور -->
+        <div class="gallery">
+            <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\download (1).jpg" alt="صورة الملعب 1">
+            <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\th (1).jpg" alt="صورة الملعب 2">
+            <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\th.jpg" alt="صورة الملعب 3">
+        </div>
+
+        <!-- زر التفاعل -->
+        <button id="interactiveButton">اضغط هنا لمعرفة المزيد!</button>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // تغيير النص عند الضغط على الزر
+        document.getElementById('interactiveButton').addEventListener('click', function() {
+            alert('مرحبًا! هل تعلم أن لعبة الجولف تُعتبر واحدة من أقدم الرياضات في العالم؟');
+        });
+
+        // إظهار/إخفاء التفاصيل الإضافية
+        document.getElementById('toggleDetails').addEventListener('click', function() {
+            const details = document.getElementById('extraDetails');
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                this.textContent = 'إخفاء التفاصيل';
+            } else {
+                details.classList.add('hidden');
+                this.textContent = 'عرض المزيد من التفاصيل';
+            }
+        });
+    </script>
+</body>
+</html>

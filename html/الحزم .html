@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحزم المخصصة المعروضة</title>
+    <link rel="stylesheet" href="G:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\حزم.css"> <!-- استخدم مسارًا نسبيًا -->
+</head>
+<body>
+    <div class="container">
+        <h1>الحزم المخصصة المعروضة</h1>
+
+        <div class="package">
+            <h2>الحزمة المخصصة المعروضة - خمس جولات</h2>
+            <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\OIP (2).jpg" alt="خمس جولات جولف">
+            <ul>
+                <li>إقامة كاملة لمدة خمس ليالٍ في جناح فاخر</li>
+                <li>18 حفرة لكل جولة</li>
+                <li>تأجير العربات</li>
+                <li>جلسة تدريب رقمية مجانية</li>
+                <li>جولة واحدة في ملعب سي قيو الشهير (<a href="https://triple.golf/ar/club/sage-view-golf-course-riverhurst-saskatchewan" class="link" target="_blank">ملعب سي قيو</a>)</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <h2>الحزمة المخصصة المعروضة - الجولة الثلاثية</h2>
+            <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\OIP (1).jpg" alt="الجولة الثلاثية">
+            <ul>
+                <li>إقامة لمدة ليلتين في غرفة مزدوجة مع وجبة إفطار</li>
+                <li>ثلاث جولات 18 حفرة تشمل خوض جولة واحدة في <a href="https://triple.golf/ar/club/sage-view-golf-course-riverhurst-saskatchewan" class="link" target="_blank">ملعب سي قيو الشهير</a> (إن وجدت)</li>
+                <li>تأجير العربات مجانًا</li>
+                <li>خصم 20% للمتجر المحترف</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <h2>الحزمة المخصصة المعروضة - استراحة استجمام</h2>
+            <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\download.jpg" alt="استراحة استجمام">
+            <ul>
+                <li>إقامة لليلة واحدة مع وجبة إفطار كاملة</li>
+                <li>تناول العشاء في أي من مطاعم المنتجع</li>
+                <li>الوصول إلى الملاعب (تطبق الرسوم ويستبعد ملعب سي قيو)</li>
+                <li>تأجير نادي مجاني</li>
+            </ul>
+        </div>
+
+        <div class="package">
+            <h2>الحزم المخصصة للفعاليات المؤسسية والإقامات الطويلة</h2>
+            <ul>
+                <li>لعملاء الفعاليات المؤسسية والإقامات الطويلة، يجب الاتصال بالشركة لترتيب الحزم المخصصة.</li>
+            </ul>
+        </div>
+
+        <!-- إضافة زر مع وظيفة JavaScript -->
+        <button class="custom-button" onclick="showMessage()">اضغط هنا للمزيد من التفاصيل</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            var messageElement = document.getElementById("message");
+            messageElement.textContent = "شكرًا على اهتمامك! سنكون سعداء بتقديم المزيد من التفاصيل قريبًا.";
+            messageElement.style.display = "block"; // عرض الرسالة
+
+            // إخفاء الرسالة بعد 5 ثوانٍ
+            setTimeout(function() {
+                messageElement.style.display = "none";
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

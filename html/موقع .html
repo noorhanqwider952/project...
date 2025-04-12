@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملعب الجولف الملكي</title>
+    <link rel="stylesheet" href="G:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\موقع.css"> <!-- استخدم مسارًا نسبيًا -->
+
+</head>
+<body>
+    <!-- الرأس -->
+    <header>
+        <h1>مرحبًا بكم في ملعب الجولف الملكي</h1>
+        <nav>
+            <ul>
+<li><a href="https://www.bing.com/ck/a?!&&p=c26a7e4440edb9f5ca2b596d37ca6c70ea1c0b548374bf8e56317f34512e2b3eJmltdHM9MTc0MDcwMDgwMA&ptn=3&ver=2&hsh=4&fclid=049b222a-1362-6ce8-3988-312912766dd8&psq=%d8%ae%d8%af%d9%85%d8%a7%d8%aa+%d9%85%d9%88%d9%82%d8%b9+%d8%ac%d9%88%d9%84%d9%81&u=a1aHR0cHM6Ly9qZ2Znb2xmLmNvbS8_bGFuZz1hcg&ntb=1">معرض الصور</a></li>
+<li><a href="https://www.bing.com/ck/a?!&&p=c26a7e4440edb9f5ca2b596d37ca6c70ea1c0b548374bf8e56317f34512e2b3eJmltdHM9MTc0MDcwMDgwMA&ptn=3&ver=2&hsh=4&fclid=049b222a-1362-6ce8-3988-312912766dd8&psq=%d8%ae%d8%af%d9%85%d8%a7%d8%aa+%d9%85%d9%88%d9%82%d8%b9+%d8%ac%d9%88%d9%84%d9%81&u=a1aHR0cHM6Ly9qZ2Znb2xmLmNvbS8_bGFuZz1hcg&ntb=1">اتصل بنا</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main>
+        <!-- قسم "عن الملعب" -->
+        <section id="about">
+            <button class="toggle-button" onclick="toggleSection('about-content')">عرض/إخفاء</button>
+            <h2>عن الملعب</h2>
+            <div id="about-content">
+                <p>ملعب الجولف الملكي هو واحد من أفضل ملاعب الجولف في المنطقة، حيث يوفر تجربة فريدة لمحبي هذه الرياضة. يتميز الملعب بتصميمه الحديث والطبيعي الذي يجمع بين التحدي والمتعة.</p>
+            </div>
+        </section>
+
+        <!-- قسم "الخدمات" -->
+        <section id="services">
+            <button class="toggle-button" onclick="toggleSection('services-content')">عرض/إخفاء</button>
+            <h2>الخدمات</h2>
+            <div id="services-content">
+                <ul>
+                    <li>دورات تدريبية للمبتدئين والمحترفين</li>
+                    <li>تأجير أدوات الجولف</li>
+                    <li>مرافق استراحة ومقهى</li>
+                    <li>مسابقات دورية</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- قسم "معرض الصور" -->
+        <section id="gallery">
+            <h2>معرض الصور</h2>
+            <div class="gallery">
+                <img id="gallery-image" src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\OIP (2).jpg">
+                " alt="صورة للملعب">
+                <button onclick="changeImage(-1)">السابق</button>
+                <button onclick="changeImage(1)">التالي</button>
+            </div>
+        </section>
+
+        <!-- قسم "اتصل بنا" -->
+        <section id="contact">
+            <button class="toggle-button" onclick="toggleSection('contact-content')">عرض/إخفاء</button>
+            <h2>اتصل بنا</h2>
+            <div id="contact-content">
+                <p>للحجز والاستفسار، يرجى التواصل معنا عبر:</p>
+                <p>الهاتف: 123-456-7890</p>
+                <p>البريد الإلكتروني: info@golfroyal.com</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- الذيل -->
+    <script>
+        // وظيفة إظهار/إخفاء الأقسام
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.classList.contains("hidden")) {
+                section.classList.remove("hidden");
+            } else {
+                section.classList.add("hidden");
+            }
+        }
+
+        // معرض الصور التفاعلي
+        const images = [
+            "images/photo1.jpg",
+            "images/photo2.jpg",
+            "images/photo3.jpg"
+        ];
+        let currentIndex = 0;
+
+        function changeImage(step) {
+            currentIndex += step;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            document.getElementById("gallery-image").src = images[currentIndex];
+        }
+
+        // رسالة ترحيبية عند تحميل الصفحة
+        window.onload = function() {
+            alert("مرحبًا بك في ملعب الجولف الملكي!");
+        };
+    </script>
+</body>
+</html>

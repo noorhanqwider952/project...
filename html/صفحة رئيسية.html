@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعريف لعبة الجولف</title>
+    <link rel="stylesheet" href="G:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\الصفحة الرئيسية.css">
+</head>
+<body>
+    <div class="container">
+        <h1>تعريف لعبة الجولف</h1>
+        <p>الجولف هي رياضة فردية أو جماعية حيث يتم ضرب كرة صغيرة باستخدام عصا مخصصة داخل حفر صغيرة عبر ملعب مخصص، بهدف إتمام كل حفرة بأقل عدد ممكن من الضربات. تُلعب الجولف في الملاعب المفتوحة، وتُعد واحدة من أقدم الرياضات التي تمارس على مستوى العالم.</p>
+
+        <h2>أزرار التنقل بين الصفحات</h2>
+        <nav>
+            <ul>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\مرافق.html">المرافق المقدمة </a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\الحزم .html">الحزم المخصصة</a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\التواصل.html">صفحة الاتصال</a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\موقع .html">الموقع</a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\معلومات اضافية عن جولف.html">معلومات اضافية</a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\استفسارات.html">استفسارات</a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\قواعد اللعبة.html">قواعد اللعبة</a></li>
+                <li><a href="G:\نورهان مجيد مواقع 2\بعد التعديل\العروض .html">العروض</a></li>
+            </ul>
+        </nav>
+
+        <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\OIP.jpg" width=800px alt="الجولة الثلاثية">
+
+        <!-- إضافة ملف صوتي -->
+        <h2>استمع إلى مقطع صوتي عن الجولف</h2>
+        <audio controls>
+            <source src="https://youtu.be/lU8gkAZYLPw?t=6">
+            <source src="https://youtu.be/lU8gkAZYLPw?t=6">
+            عذراً، متصفحك لا يدعم تشغيل الملفات الصوتية.
+        </audio>
+
+        <button id="detailsButton">مزيد من التفاصيل</button>
+
+        <!-- Login Form Section -->
+        <div class="form-container">
+            <h2>تسجيل الدخول</h2>
+            <form action="login_process.php" method="POST">
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+        </div>
+
+        <!-- Sign-up Form Section -->
+        <div class="form-container">
+            <h2>إنشاء حساب</h2>
+            <form action="signup_process.php" method="POST" onsubmit="return validatePassword()">
+                <label for="signup-username">اسم المستخدم:</label>
+                <input type="text" id="signup-username" name="username" required>
+
+                <label for="signup-email">البريد الإلكتروني:</label>
+                <input type="email" id="signup-email" name="email" required>
+
+                <label for="signup-password">كلمة المرور:</label>
+                <input type="password" id="signup-password" name="password" required>
+
+                <label for="signup-confirm-password">تأكيد كلمة المرور:</label>
+                <input type="password" id="signup-confirm-password" name="confirm-password" required>
+
+                <button type="submit">إنشاء حساب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // إظهار رسالة عند النقر على الزر
+        document.getElementById('detailsButton').addEventListener('click', function() {
+            alert('شكراً لاهتمامك بمعلومات الجولف!');
+        });
+
+        // تحقق من تطابق كلمتي المرور في نموذج الإنشاء
+        function validatePassword() {
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('كلمتا المرور غير متطابقتين!');
+                return false; // منع إرسال النموذج
+            }
+            return true; // السماح بإرسال النموذج
+        }
+    </script>
+</body>
+</html>

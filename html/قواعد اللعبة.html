@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قواعد لعبة الجولف</title>
+    <link rel="stylesheet" href="D:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\قواعد اللعبة.css">
+</head>
+<body>
+
+    <header>
+        <h1>قواعد لعبة الجولف</h1>
+    </header>
+
+    <div class="container">
+        <p>مرحبًا بك في دليل قواعد لعبة الجولف! اضغط على الزر أدناه لعرض القواعد:</p>
+        <button onclick="toggleRules()">عرض القواعد</button>
+
+        <ul id="rules" class="rules-list hidden">
+            <li>الهدف من اللعبة هو ضرب الكرة بأقل عدد ممكن من الضربات حتى تصل إلى الحفرة.</li>
+            <li>يبدأ اللاعبون اللعبة من نقطة البداية (Tee) ويجب أن يصلوا إلى الحفرة في أقل عدد من الضربات.</li>
+            <li>كل حفرة لها عدد معين من الضربات المثالية يسمى "Par".</li>
+            <li>إذا أكمل اللاعب الحفرة بعدد ضربات أقل من Par، يُعتبر ذلك إنجازًا.</li>
+            <li>إذا أكمل اللاعب الحفرة بعدد ضربات أكثر من Par، يتم تسجيل النقاط الإضافية.</li>
+            <li>لا يجوز لمس الكرة أو تحريكها أثناء اللعب إلا في الحالات المسموح بها.</li>
+            <li>يجب احترام قوانين اللعبة وأخلاقياتها، مثل الصمت أثناء لعب الآخرين.</li>
+        </ul>
+    </div>
+<div>
+    <img src="g:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\th (1).jpg">
+</div>
+    <script>
+        // دالة لإظهار أو إخفاء القواعد
+        function toggleRules() {
+            const rules = document.getElementById('rules');
+            if (rules.classList.contains('hidden')) {
+                rules.classList.remove('hidden');
+            } else {
+                rules.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

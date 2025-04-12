@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح تسجيل في لعبة الجولف</title>
+
+<link rel="stylesheet" href="G:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\فيديو تسجيل .css">
+</head>
+<body>
+    <!-- الرأس -->
+    <header>
+        <h1>شرح تسجيل في لعبة الجولف</h1>
+    </header>
+
+    <!-- الوصف -->
+    <p>شاهد الفيديو أدناه لمعرفة كيفية تسجيل في لعبة الجولف الرياضية.</p>
+
+    <!-- الفيديو -->
+    <video id="golfVideo" controls>
+        <source src=" golf-video.mp4" type="video/mp4">
+        عذرًا، متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+
+    <!-- أزرار التحكم -->
+    <div class="controls">
+        <button onclick="playVideo()">تشغيل الفيديو</button>
+        <button onclick="pauseVideo()">إيقاف الفيديو</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // تحديد العنصر الخاص بالفيديو
+        const video = document.getElementById('golfVideo');
+
+        // وظيفة تشغيل الفيديو
+        function playVideo() {
+            video.play();
+        }
+
+        // وظيفة إيقاف الفيديو
+        function pauseVideo() {
+            video.pause();
+        }
+    </script>
+</body>
+</html>

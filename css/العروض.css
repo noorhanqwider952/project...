@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+h1 {
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.package {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.package:hover {
+    transform: scale(1.05);
+}
+.package h2 {
+    color: #2c3e50;
+}
+.package p {
+    color: #555;
+}
+.package .price {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+.package button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.package button:hover {
+    background-color: #219653;
+}
+.details {
+    margin-top: 10px;
+    display: none;
+}
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بطولات الجولف</title>
+    <link rel="stylesheet" href="G:\نورهان مجيد مواقع 2\بعد التعديل\مرافق.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبًا بك في بطولات الجولف</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.viewuae.net/ملاعب-الجولف-في-دبي/">الملاعب</a></li>
+                <li><a href="https://www.thisisriyadh.com/ar/category/تسليه-ومغامرات">الأنشطة</a></li>
+                <li><a href="https://golfpowerclub.com/">صفحة اعطاء معلومات وخطط وفعاليات عن لعبة جولف</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="courses">
+        <h2>ملاعب الجولف</h2>
+        <div class="course-buttons">
+            <button onclick="showCourseDetails('ملعب سي فيو')">ملعب سي فيو</button>
+            <button onclick="showCourseDetails('النادي الأول')">النادي الأول</button>
+            <button onclick="showCourseDetails('النادي الثاني')">النادي الثاني</button>
+        </div>
+        <div id="course-details">
+            <!-- تفاصيل الملعب ستظهر هنا -->
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2>الأنشطة</h2>
+        <ul>
+            <li>ساحة تدريب مضاءة بالأنوار الكشافة</li>
+            <li>دروس جولف</li>
+            <li>التدريب الرقمي</li>
+        </ul>
+    </section>
+
+    <section id="services">
+        <h2>الخدمات</h2>
+        <ul>
+            <li>الإقامة في الفنادق</li>
+            <li>المطاعم والمقاهي</li>
+            <li>متجر المحترفين</li>
+            <li>خدمة المساعدة على حمل أدوات الجولف</li>
+        </ul>
+        <img src="c:\Users\Dell\Desktop\00.png" alt="صورة زفاف" width="600" height="300">
+    </section>
+
+
+    <!-- إضافة JavaScript مباشرة في الصفحة -->
+    <script>
+        // وظيفة لعرض تفاصيل الملعب
+        function showCourseDetails(courseName) {
+            const detailsDiv = document.getElementById('course-details');
+            let details = '';
+
+            // تحديد التفاصيل بناءً على اسم الملعب
+            switch (courseName) {
+                case 'ملعب سي فيو':
+                    details = '<p>ملعب سي فيو هو ملعب رائع يقع في قلب المدينة. يتميز بإطلالة جميلة على البحر ومساحات خضراء واسعة.</p>';
+                    break;
+                case 'النادي الأول':
+                    details = '<p>النادي الأول هو واحد من أقدم ملاعب الجولف في المنطقة. يتميز بتاريخه العريق وتصميمه الفريد.</p>';
+                    break;
+                case 'النادي الثاني':
+                    details = '<p>النادي الثاني هو ملعب حديث تم تجهيزه بأحدث التقنيات لضمان تجربة لعب مميزة.</p>';
+                    break;
+                default:
+                    details = '<p>لم يتم العثور على تفاصيل لهذا الملعب.</p>';
+            }
+
+            // عرض التفاصيل في القسم المخصص
+            detailsDiv.innerHTML = details;
+        }
+    </script>
+</body>
+</html>

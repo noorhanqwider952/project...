@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باقات لعبة الجولف</title>
+    <link rel="stylesheet" href="G:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\العروض.css">
+</head>
+<body>
+
+    <header>
+        <h1>باقات لعبة الجولف</h1>
+    </header>
+
+    <div class="container">
+        <!-- باقة 1 -->
+        <div class="package" id="package1">
+            <h2>الباقة الأساسية</h2>
+            <p>تتضمن دخول مجاني للملعب لمدة يوم واحد.</p>
+            <div class="price">50$</div>
+            <button onclick="toggleDetails('details1')">عرض التفاصيل</button>
+            <div class="details" id="details1">
+                <p>تشمل:</p>
+                <ul>
+                    <li>دخول الملعب ليوم واحد</li>
+                    <li>معدات أساسية مجانية</li>
+                    <li>دروس تدريبية قصيرة</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- باقة 2 -->
+        <div class="package" id="package2">
+            <h2>الباقة الاحترافية</h2>
+            <p>تتضمن دخول مجاني للملعب لمدة أسبوع.</p>
+            <div class="price">150$</div>
+            <button onclick="toggleDetails('details2')">عرض التفاصيل</button>
+            <div class="details" id="details2">
+                <p>تشمل:</p>
+                <ul>
+                    <li>دخول الملعب لمدة أسبوع</li>
+                    <li>معدات احترافية مجانية</li>
+                    <li>دروس تدريبية مكثفة</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- باقة 3 -->
+        <div class="package" id="package3">
+            <h2>الباقة الفاخرة</h2>
+            <p>تتضمن دخول مجاني للملعب لمدة شهر.</p>
+            <div class="price">300$</div>
+            <button onclick="toggleDetails('details3')">عرض التفاصيل</button>
+            <div class="details" id="details3">
+                <p>تشمل:</p>
+                <ul>
+                    <li>دخول الملعب لمدة شهر</li>
+                    <li>معدات فاخرة مجانية</li>
+                    <li>دروس تدريبية خاصة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDetails(detailsId) {
+            const details = document.getElementById(detailsId);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

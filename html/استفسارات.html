@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استفسارات عن لعبة الجولف</title>
+    <link rel="stylesheet" href="D:\نورهان مجيد مواقع محدد\نورهان مجيد مواقع محدد\بعد التعديل\استفسارات.css">
+</head>
+<body>
+    <div class="container">
+        <h1>استفسارات عن لعبة الجولف</h1>
+        <form id="golfForm">
+            <label for="name">اسمك:</label>
+            <input type="text" id="name" placeholder="أدخل اسمك" required>
+
+            <label for="question">استفسارك:</label>
+            <textarea id="question" rows="4" placeholder="اكتب استفسارك هنا..." required></textarea>
+
+            <button type="submit">إرسال الاستفسار</button>
+        </form>
+
+        <div class="responses" id="responses">
+            <h2>الردود:</h2>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript لإضافة الوظائف التفاعلية
+        document.getElementById('golfForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            // الحصول على القيم المدخلة
+            const name = document.getElementById('name').value.trim();
+            const question = document.getElementById('question').value.trim();
+
+            if (name && question) {
+                // إنشاء عنصر جديد لعرض الاستفسار
+                const responseDiv = document.createElement('div');
+                responseDiv.classList.add('response-item');
+                responseDiv.innerHTML = `<strong>${name}:</strong> ${question}`;
+
+                // إضافة الاستفسار إلى قسم الردود
+                document.getElementById('responses').appendChild(responseDiv);
+
+                // مسح الحقول بعد الإرسال
+                document.getElementById('name').value = '';
+                document.getElementById('question').value = '';
+            } else {
+                alert('يرجى ملء جميع الحقول!');
+            }
+        });
+    </script>
+</body>
+</html>
